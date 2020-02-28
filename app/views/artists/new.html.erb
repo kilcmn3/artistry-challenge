@@ -1,0 +1,23 @@
+<h1>Artist's new!</h1>
+    <% if @error%>
+    <% @error.each do |e| %>
+    <p><%= e %></p>
+    <% end %>
+    <% end %>
+
+
+<%= form_for @artist do |f| %>
+<%= f.label :age, "age: " %>
+<%= f.number_field :age %>
+<br>
+<%= f.label :name, "name: " %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :title, "title: " %>
+<%= f.text_field :title %>
+<br>
+<%= f.label :instrument, "Choos your instrument: " %>
+<%=f.collection_select :instrument_id, @instruments, :id, :name , {:selected => @instruments} %>
+<%= f.submit %>
+<% end %>
+

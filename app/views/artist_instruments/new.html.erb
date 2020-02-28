@@ -1,0 +1,11 @@
+<h1>Welcome!! assign for an artist and instrument</h1>
+
+<%= form_for @artist_instrument do |f| %>
+<%= f.label :artist_id, "Choose an Artists: " %>
+<%= f.collection_select(:artist_id, @artists, :id, :name) %>
+<br>
+<br>
+<%= f.label :instrument_id, "Choose an Instrument: " %>
+<%= f.collection_select(:instrument_id, @instruments, :id, :name) %>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,17 @@
+<h1>Artist's show page!</h1>
+<h3><%= link_to "Main page", artists_path %></h3>
+<p>
+<label for="age"></label> 
+<%= @artist.age %>
+<br>
+<label for="name"></label> 
+<%= @artist.name %>
+<br>
+<label for="title"></label> 
+<%= @artist.title %>
+<br>
+<% @artist.instruments.each do |list| %>
+<label for="artist.instrument">Artist's instrument: </label> 
+<%= list.name %>
+<% end %>
+</p>

@@ -1,0 +1,25 @@
+<h1>Artist's index!</h1>
+<h4><%= link_to "Create New artist!", new_artist_path%></h4>
+<h4><%= link_to "Pair artist for instrument!", new_artist_instrument_path %></h4>
+<br>
+<br>
+<% @artists.each do |artist| %>
+<p>
+<label for="name">Artist's name: </label>
+<%= link_to artist.name, artist_path(artist) %>
+<br>
+<br>
+<p>
+<% artist.instruments.each do |find| %>
+<label for="instrument">Artist's instrument name: </label> 
+<%= find.name %>
+<br>
+<br>
+<label for="instrument">Artist's instrument classification: </label> 
+<%= find.classification %>
+</p>
+</p> 
+<% end %>
+<br>
+<br>
+<% end %>

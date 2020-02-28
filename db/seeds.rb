@@ -1,3 +1,8 @@
+Artist.destroy_all
+puts "Creating Artists!"
+Instrument.destroy_all
+puts "Creating Instruments!"
+
 Artist.create(name: "Michael Jackson", age: rand(50), title: "King of Pop")
 Artist.create(name: "Stevie Wonder", age: rand(50), title: "Little Stevie Wonder")
 Artist.create(name: "Elvis Presley", age: rand(50), title: "the King")
